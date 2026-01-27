@@ -1,0 +1,23 @@
+[general]
+name=Deep Learning in QGIS 
+qgisMinimumVersion=3.0
+description=Plugin for Deep Learning object detection using YOLO11-obb
+version=1.0
+author=Blue Team Intelligence
+email=info@blueteam-intelligence.nl
+
+about=Plugin for training and detection of objects or image classification using satellite or aerial imagery.
+
+hasProcessingProvider=no
+# Uncomment the following line and add your changelog:
+# changelog=
+
+# Tags are comma separated with spaces allowed
+tags=python, deep learning, computer vision, object detection, image classification
+
+homepage=http://www.blueteam-intelligence.nl
+category=Plugins
+icon=icon.png
+experimental=True
+deprecated=False
+server=False

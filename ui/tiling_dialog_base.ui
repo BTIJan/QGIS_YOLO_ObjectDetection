@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+  <class>PluginDialogBase</class>
+  <widget class="QWidget" name="PluginDialogBase">
+    <property name="geometry">
+      <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>500</width>
+        <height>350</height>
+      </rect>
+    </property>
+    <property name="windowTitle">
+      <string>Raster Tiling Tool</string>
+    </property>
+    <layout class="QVBoxLayout" name="mainLayout">
+      <item>
+        <layout class="QHBoxLayout" name="shapefileLayout">
+          <item>
+            <widget class="QLabel" name="shapefileLabel">
+              <property name="minimumSize">
+                <size>
+                  <width>100</width>
+                  <height>0</height>
+                </size>
+              </property>
+              <property name="text">
+                <string>Trainings file (vector):</string>
+              </property>
+            </widget>
+          </item>
+          <item>
+            <widget class="QLineEdit" name="shapefile">
+              <property name="readOnly">
+                <bool>true</bool>
+              </property>
+              <property name="placeholderText">
+                <string>Select file with training features (.shp, .gpkg, .geojson)</string>
+              </property>
+            </widget>
+          </item>
+          <item>
+            <widget class="QPushButton" name="browseShapefile">
+              <property name="text">
+                <string>Browse</string>
+              </property>
+            </widget>
+          </item>
+        </layout>
+      </item>
+
+      <item>
+        <layout class="QHBoxLayout" name="rasterFolderLayout">
+          <item>
+            <widget class="QLabel" name="folderLabel">
+              <property name="minimumSize">
+                <size>
+                  <width>100</width>
+                  <height>0</height>
+                </size>
+              </property>
+              <property name="text">
+                <string>Raster Folder:</string>
+              </property>
+            </widget>
+          </item>
+          <item>
+            <widget class="QLineEdit" name="rasterFolder">
+              <property name="readOnly">
+                <bool>true</bool>
+              </property>
+              <property name="placeholderText">
+                <string>Select folder containing rasters...</string>
+              </property>
+            </widget>
+          </item>
+          <item>
+            <widget class="QPushButton" name="browseRaster">
+              <property name="text">
+                <string>Browse</string>
+              </property>
+            </widget>
+          </item>
+        </layout>
+      </item>
+
+      <item>
+        <layout class="QHBoxLayout" name="tileSizeLayout">
+          <item>
+            <widget class="QLabel" name="tileSizeLabel">
+              <property name="minimumSize">
+                <size>
+                  <width>100</width>
+                  <height>0</height>
+                </size>
+              </property>
+              <property name="text">
+                <string>Tile Size:</string>
+              </property>
+            </widget>
+          </item>
+          <item>
+            <widget class="QLineEdit" name="tileSize">
+              <property name="text">
+                <string>1024</string>
+              </property>
+            </widget>
+          </item>
+        </layout>
+      </item>
+
+      <item>
+        <layout class="QHBoxLayout" name="overlapLayout">
+          <item>
+            <widget class="QLabel" name="overlapLabel">
+              <property name="minimumSize">
+                <size>
+                  <width>100</width>
+                  <height>0</height>
+                </size>
+              </property>
+              <property name="text">
+                <string>Overlap:</string>
+              </property>
+            </widget>
+          </item>
+          <item>
+            <widget class="QLineEdit" name="tileOverlap">
+              <property name="text">
+                <string>150</string>
+              </property>
+            </widget>
+          </item>
+        </layout>
+      </item>
+
+      <item>
+        <layout class="QHBoxLayout" name="backgroundRatioLayout">
+          <item>
+            <widget class="QLabel" name="backgroundRatioLabel">
+              <property name="minimumSize">
+                <size>
+                  <width>100</width>
+                  <height>0</height>
+                </size>
+              </property>
+              <property name="text">
+                <string>Background Ratio:</string>
+              </property>
+            </widget>
+          </item>
+          <item>
+            <widget class="QDoubleSpinBox" name="backgroundRatioSpinBox">
+              <property name="toolTip">
+                <string>Ratio of background tiles to generate for each feature tile (e.g., 1.5)</string>
+              </property>
+              <property name="decimals">
+                <number>1</number>
+              </property>
+              <property name="singleStep">
+                <double>0.1</double>
+              </property>
+              <property name="value">
+                <double>0.2</double>
+              </property>
+            </widget>
+          </item>
+          <item>
+            <spacer name="horizontalSpacer_2">
+              <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+                <size>
+                  <width>40</width>
+                  <height>20</height>
+                </size>
+              </property>
+            </spacer>
+          </item>
+        </layout>
+      </item>
+
+      <item>
+        <layout class="QHBoxLayout" name="outputLayout">
+          <item>
+            <widget class="QLabel" name="outputLabel">
+              <property name="minimumSize">
+                <size>
+                  <width>100</width>
+                  <height>0</height>
+                </size>
+              </property>
+              <property name="text">
+                <string>Output Folder:</string>
+              </property>
+            </widget>
+          </item>
+          <item>
+            <widget class="QLineEdit" name="outputFolder">
+              <property name="readOnly">
+                <bool>true</bool>
+              </property>
+              <property name="placeholderText">
+                <string>Select destination for all tiles...</string>
+              </property>
+            </widget>
+          </item>
+          <item>
+            <widget class="QPushButton" name="browseOutput">
+              <property name="text">
+                <string>Browse</string>
+              </property>
+            </widget>
+          </item>
+        </layout>
+      </item>
+
+      <item>
+        <spacer name="verticalSpacer">
+          <property name="orientation">
+            <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+            <size>
+              <width>20</width>
+              <height>40</height>
+            </size>
+          </property>
+        </spacer>
+      </item>
+
+      <item>
+        <widget class="QDialogButtonBox" name="buttonBox">
+          <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="standardButtons">
+            <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+          </property>
+        </widget>
+      </item>
+    </layout>
+  </widget>
+
+  <resources/>
+  <connections/>
+</ui>

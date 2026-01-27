@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/plugins/deep_learning_experimental_objectdetection" >
+        <file>icon.png</file>
+    </qresource>
+</RCC>
