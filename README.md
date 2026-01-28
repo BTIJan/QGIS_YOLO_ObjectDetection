@@ -1,9 +1,5 @@
 ## Introduction
-This plugin uses YOLO11-obb to train deep learning models and to apply deep learning models on aerial or satellite imagery. 
-The plugin consists of 5 parts: Tiling, Dataset preparation, Training, Detection and External validation. YOLO is mainly used for object detection in video footage and images. 
-Because aerial and satellite photos contain a much larger number of pixels than regular images, it is important to first split these images into smaller ones (tiling module).
-Next, the training data must be converted into the correct format for the YOLO algorithm (preparation module). After that, the model can be trained (training module).
-Finally, a trained model can be used to recognize objects with the detection module. To objectively verify how well the model can detect objects, a validation module has also been developed. 
+This QGIS plugin trains and runs Ultralytics YOLO11-OBB object-detection models on aerial and satellite imagery. It provides a guided workflow for tiling large rasters, preparing a YOLO dataset, training a model, running tiled inference (SAHI) on new imagery, and performing external validation against an independent ground-truth dataset.. 
 
 ### Installation 
 Install the plugin in QGIS after downloading it as a .zip file. After installation, you might be prompted to install required packages in the python environment of QGIS. The easiest way is to install this using pip in OSGEO shell. 
