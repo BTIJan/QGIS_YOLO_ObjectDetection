@@ -31,7 +31,7 @@ See Ultralytics documentation for an elaborate description of each setting
 ### Detection
 The Detection module applies the trained object-detection model to aerial or satellite imagery using the Slicing Aided Hyper Inference (SAHI) approach.
 SAHI moves a sliding window systematically across the image and runs detection on each slice. This often improves detection of small objects compared to running object detection on the entire image in a single pass.
-Min object size and max object size define the size range of the detections. 
+Min object size and max object size define the size range of the detections. After detection is complete, add the layer to QGIS and select the CRS you want to view the data in. 
 
 ### External validation
 During training, validation metrics are computed automatically, but they are based on an internal validation split from the same dataset as the training data, which can make results look more optimistic than truly independent external validation.
