@@ -1,6 +1,8 @@
 ## Introduction
 This QGIS plugin trains and runs Ultralytics YOLO11-OBB object-detection models on aerial and satellite imagery. It provides a guided workflow for tiling large rasters, preparing a YOLO dataset, training a model, running tiled inference (SAHI) on new imagery, and performing external validation against an independent ground-truth dataset.
 
+**IMPORTANT: The plugin is an early version. It has been developed on Windows 11, using QGIS 3.34 and a NVIDIA 4000-series GPU. Please report any issues in this repo or feel free to modify the code**
+
 ### Installation 
 Install the plugin in QGIS after downloading it as a .zip file. After installation, you might be prompted to install required packages in the python environment of QGIS. The easiest way is to install this using pip in OSGEO shell. 
 #### Torch
@@ -8,9 +10,8 @@ The plugin is only tested for Cuda version 12.4 to 12.6, make sure your cuda ver
 `python -c "import sys, torch; print(sys.version); print(torch.__version__); print('cuda build', torch.version.cuda); print('is_available', torch.cuda.is_available())"`
 Install the torch wheel using where 'cu126' stand for Cuda version 12.6: 
 `python -m pip install torch==2.9.1 torchvision torchaudio --index-url https://download.pytorch.org/whl/cu126`
-After installing all the other packages the plugin should be visible in QGIS. 
+After installing all other packages the plugin should be visible in QGIS. 
 
-**The plugin is an early version. It has been developed on Windows 11, using QGIS 3.34 and a NVIDIA 4000-series GPU. Please report any issues in this repo**
 ## Usage manual
 ### Tiling module
 The Tiling module generates YOLO-ready image tiles from large aerial/satellite rasters by cutting only around labeled training objects (plus a controlled amount of empty “background” tiles) to maximize useful training data.
