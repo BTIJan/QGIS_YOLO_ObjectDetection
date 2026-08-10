@@ -377,6 +377,7 @@ class PluginMain:
             "copy_paste": get_float(self.dock_train.inner.copypasteEdit, 0.3),
             "lr0": get_float(self.dock_train.inner.lr0Edit, 0.01),
             "lrf": get_float(self.dock_train.inner.lrfEdit, 0.1),
+            "optimizer":self.dock_train.inner.optimizerEdit.text(),
             "cls": get_float(self.dock_train.inner.clsEdit, 1.2),
             "momentum": get_float(self.dock_train.inner.momentumEdit, 0.937),
             "fliplr": get_float(self.dock_train.inner.fliplrEdit, 0.2),
