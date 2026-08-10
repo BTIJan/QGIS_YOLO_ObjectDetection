@@ -78,6 +78,7 @@ def main():
         parser.add_argument("--copy_paste", type=float, default=0.0)
         parser.add_argument("--lr0", type=float, default=0.01)
         parser.add_argument("--lrf", type=float, default=0.1)
+        parser.add_argument("--optimizer", type=str, default="auto")
         parser.add_argument("--cls", type=float, default=0.1)
         parser.add_argument("--momentum", type=float, default=0.937)
         parser.add_argument("--fliplr", type=float, default=0.2)
@@ -124,6 +125,7 @@ def main():
             copy_paste=args.copy_paste,
             lr0=args.lr0,
             lrf=args.lrf,
+            optimizer=args.optimizer,
             cls=args.cls,
             momentum=args.momentum,
             fliplr=args.fliplr,
