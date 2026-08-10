@@ -288,13 +288,27 @@
             </item>
 
             <item row="3" column="0">
+              <widget class="QLabel" name="label_optimizer">
+                <property name="text">
+                  <string>Optimizer:</string>
+                </property>
+              </widget>
+            </item>
+            <item row="3" column="1">
+              <widget class="QLineEdit" name="optimizerEdit">
+                <property name="text">
+                  <string>auto</string>
+                </property>
+              </widget>
+            </item>
+            <item row="4" column="0">
               <widget class="QLabel" name="label_cls">
                 <property name="text">
                   <string>Classification Loss Weight (cls):</string>
                 </property>
               </widget>
             </item>
-            <item row="3" column="1">
+            <item row="4" column="1">
               <widget class="QLineEdit" name="clsEdit">
                 <property name="text">
                   <string>1.2</string>
@@ -302,14 +316,14 @@
               </widget>
             </item>
 
-            <item row="4" column="0">
+            <item row="5" column="0">
               <widget class="QLabel" name="label_18">
                 <property name="text">
                   <string>Box:</string>
                 </property>
               </widget>
             </item>
-            <item row="4" column="1">
+            <item row="5" column="1">
               <widget class="QLineEdit" name="boxEdit">
                 <property name="text">
                   <string>5</string>
@@ -317,14 +331,14 @@
               </widget>
             </item>
 
-            <item row="5" column="0">
+            <item row="6" column="0">
               <widget class="QLabel" name="label_19">
                 <property name="text">
                   <string>Cache:</string>
                 </property>
               </widget>
             </item>
-            <item row="5" column="1">
+            <item row="6" column="1">
               <widget class="QLineEdit" name="cacheEdit">
                 <property name="text">
                   <string>False</string>
@@ -332,14 +346,14 @@
               </widget>
             </item>
 
-            <item row="6" column="0">
+            <item row="7" column="0">
               <widget class="QLabel" name="label_multiscale">
                 <property name="text">
                   <string>Multiscale:</string>
                 </property>
               </widget>
             </item>
-            <item row="6" column="1">
+            <item row="7" column="1">
               <widget class="QLineEdit" name="multiscaleEdit">
                 <property name="text">
                   <string>True</string>
