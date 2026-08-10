@@ -4,7 +4,7 @@ from qgis.core import QgsTask, QgsMessageLog, Qgis
 
 class TrainingTask(QgsTask):
     def __init__(self, python_exe, train_script_path, data_yaml, epochs, imgsz, batch, model, hsv_h, hsv_s, hsv_v,
-                 mosaic, copy_paste, lr0, lrf, cls, momentum, fliplr, flipud, scale, box, cache, iface, cutmix, degrees, perspective, shear, multi_scale,
+                 mosaic, copy_paste, lr0, lrf, optimizer, cls, momentum, fliplr, flipud, scale, box, cache, iface, cutmix, degrees, perspective, shear, multi_scale,
                  output_dir, run_name):
         super().__init__("YOLO Training Task", QgsTask.CanCancel)
         
@@ -27,6 +27,7 @@ class TrainingTask(QgsTask):
             "--copy_paste": str(copy_paste),
             "--lr0": str(lr0),
             "--lrf": str(lrf),
+            "--optimizer": str(optimizer),
             "--cls": str(cls),
             "--momentum": str(momentum),
             "--fliplr": str(fliplr),
